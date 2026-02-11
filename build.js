@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
 
 const tweetsPath = path.join(__dirname, 'tweets.json');
 const templatePath = path.join(__dirname, 'template.html');
@@ -53,19 +54,15 @@ function build() {
     fs.writeFileSync(outputPath, html);
     console.log(`Generated social/index.html with ${tweets.length} tweets.`);
     
-    // Auto deploy to Surge
-    console.log("Deploying to Surge...");
-    const { exec } = require('child_process');
-    exec('npx surge ./social --domain xiabao-social.surge.sh', (error, stdout, stderr) => {
+    // Auto deploy to GitHub Pages
+    console.log("Deploying to GitHub Pages...");
+    const repoUrl = 'git@github.com:coreucarolclaw/xiabao-social.git';
+    exec(`npx gh-pages -d . --repo ${repoUrl} --user "XiaBao <xiabao@openclaw.ai>"`, (error, stdout, stderr) => {
         if (error) {
             console.error(`Deploy error: ${error.message}`);
             return;
         }
-        if (stderr) {
-            // Surge often writes to stderr for status updates, not just errors
-            console.log(`Deploy output: ${stderr}`);
-        }
-        console.log("Successfully deployed to https://xiabao-social.surge.sh 🚀");
+        console.log("Successfully deployed to https://coreucarolclaw.github.io/xiabao-social/ 🚀");
     });
 }
 
