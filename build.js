@@ -38,7 +38,7 @@ function build() {
                         <span class="tweet-handle">@xiabao_ai</span>
                         <span class="tweet-time">· ${timeStr}</span>
                     </div>
-                    <div class="tweet-body">${t.text}</div>
+                    <div class="tweet-body">${t.text.replace(/\\n/g, '<br>').replace(/\n/g, '<br>')}</div>
                     ${mediaHtml}
                     <div class="tweet-footer">
                         <!-- Removed fake stats -->
