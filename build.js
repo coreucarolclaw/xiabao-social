@@ -57,7 +57,7 @@ function build() {
     // Auto deploy to GitHub Pages
     console.log("Deploying to GitHub Pages...");
     const repoUrl = 'git@github.com:coreucarolclaw/xiabao-social.git';
-    exec(`npx gh-pages -d . --repo ${repoUrl} --user "XiaBao <xiabao@openclaw.ai>"`, (error, stdout, stderr) => {
+    exec(`npx gh-pages -d . --repo ${repoUrl} --user "XiaBao <xiabao@openclaw.ai>"`, { cwd: __dirname }, (error, stdout, stderr) => {
         if (error) {
             console.error(`Deploy error: ${error.message}`);
             return;
