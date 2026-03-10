@@ -19,6 +19,10 @@ function build() {
     // Sort by date desc
     tweets.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+    const siteVersion = tweets.length > 0
+        ? encodeURIComponent(new Date(tweets[0].date).toISOString())
+        : Date.now().toString();
+
     let tweetsHtml = '';
     for (const t of tweets) {
         const date = new Date(t.date);
@@ -26,7 +30,8 @@ function build() {
         
         let mediaHtml = '';
         if (t.image) {
-            mediaHtml = `<img src="${t.image}" class="tweet-image">`;
+            const imageSrc = t.image.includes('?') ? `${t.image}&v=${siteVersion}` : `${t.image}?v=${siteVersion}`;
+            mediaHtml = `<img src="${imageSrc}" class="tweet-image">`;
         }
 
         tweetsHtml += `
@@ -50,7 +55,9 @@ function build() {
     }
 
     const template = fs.readFileSync(templatePath, 'utf8');
-    const html = template.replace('<!-- TWEETS_PLACEHOLDER -->', tweetsHtml);
+    const html = template
+        .replace(/__SITE_VERSION__/g, siteVersion)
+        .replace('<!-- TWEETS_PLACEHOLDER -->', tweetsHtml);
     fs.writeFileSync(outputPath, html);
     console.log(`Generated social/index.html with ${tweets.length} tweets.`);
     
