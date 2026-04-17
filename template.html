@@ -101,6 +101,19 @@
             border-bottom: 1px solid var(--border);
             overflow: hidden;
         }
+        .profile::before {
+            content: '';
+            position: absolute;
+            inset: 126px 0 auto 0;
+            height: 118px;
+            z-index: 0;
+            background:
+                linear-gradient(180deg, transparent 0%, rgba(5, 7, 10, 0.14) 14%, rgba(5, 7, 10, 0.82) 66%, rgba(5, 7, 10, 0.96) 100%),
+                radial-gradient(circle at 18% 100%, rgba(135, 151, 174, 0.16), transparent 28%),
+                radial-gradient(circle at 82% 100%, rgba(94, 112, 136, 0.14), transparent 22%);
+            clip-path: polygon(0 100%, 0 48%, 8% 61%, 14% 50%, 20% 68%, 27% 54%, 33% 72%, 39% 57%, 47% 76%, 55% 52%, 62% 70%, 70% 48%, 77% 72%, 85% 55%, 91% 66%, 100% 44%, 100% 100%);
+            opacity: 0.82;
+        }
         .banner {
             position: absolute;
             inset: 0 0 auto 0;
@@ -108,29 +121,39 @@
             z-index: 0;
             overflow: hidden;
             background:
-                radial-gradient(circle at 72% 28%, rgba(235, 240, 246, 0.5) 0, rgba(235, 240, 246, 0.16) 11%, rgba(235, 240, 246, 0.02) 22%, transparent 28%),
-                radial-gradient(circle at 72% 28%, rgba(255,255,255,0.18) 0, transparent 35%),
-                linear-gradient(180deg, rgba(48, 57, 74, 0.88) 0%, rgba(19, 24, 34, 0.92) 58%, rgba(11, 15, 22, 0.98) 100%);
+                radial-gradient(circle at 12% 18%, rgba(171, 187, 206, 0.18) 0, transparent 18%),
+                radial-gradient(circle at 76% 22%, rgba(236, 241, 247, 0.18) 0, rgba(236, 241, 247, 0.06) 10%, transparent 24%),
+                radial-gradient(circle at 70% 76%, rgba(113, 127, 149, 0.16) 0, transparent 18%),
+                linear-gradient(180deg, rgba(42, 49, 65, 0.98) 0%, rgba(20, 25, 35, 0.97) 34%, rgba(10, 13, 19, 0.98) 74%, rgba(6, 8, 12, 1) 100%);
         }
         .banner::before {
             content: '';
             position: absolute;
-            inset: 24px 22px auto auto;
-            width: 208px;
-            height: 208px;
+            inset: 8px 6px auto auto;
+            width: 258px;
+            height: 258px;
             border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.11);
-            box-shadow: 0 0 0 32px rgba(255,255,255,0.02), 0 0 90px rgba(189, 205, 222, 0.08);
-            opacity: 0.95;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(3, 5, 8, 0.98) 0 23%, rgba(3, 5, 8, 0.98) 24%, rgba(10, 13, 19, 0.96) 28%, rgba(220, 229, 238, 0.96) 31%, rgba(220, 229, 238, 0.52) 35%, rgba(220, 229, 238, 0.16) 44%, rgba(220, 229, 238, 0.03) 57%, transparent 68%),
+                radial-gradient(circle at 42% 42%, rgba(248, 250, 253, 0.62) 0 6%, transparent 12%),
+                radial-gradient(circle at 60% 56%, rgba(212, 223, 235, 0.2) 0 8%, transparent 18%);
+            filter: drop-shadow(0 0 24px rgba(217, 229, 243, 0.2)) drop-shadow(0 0 58px rgba(134, 149, 171, 0.16));
+            opacity: 0.98;
         }
         .banner::after {
             content: '';
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(90deg, transparent 0, transparent 16%, rgba(255,255,255,0.1) 16.2%, transparent 16.4%, transparent 100%),
-                linear-gradient(180deg, transparent 0, transparent 64%, rgba(255,255,255,0.08) 64.2%, transparent 64.4%, transparent 100%);
-            opacity: 0.6;
+                radial-gradient(circle at 69% 24%, rgba(255,255,255,0.12) 0 1px, transparent 2px),
+                radial-gradient(circle at 74% 17%, rgba(255,255,255,0.14) 0 1.5px, transparent 2.5px),
+                radial-gradient(circle at 82% 28%, rgba(255,255,255,0.14) 0 1px, transparent 2px),
+                radial-gradient(circle at 88% 16%, rgba(255,255,255,0.18) 0 1.2px, transparent 2.6px),
+                linear-gradient(115deg, transparent 0 57%, rgba(210, 220, 232, 0.16) 57.2%, transparent 57.45%),
+                linear-gradient(180deg, rgba(255,255,255,0.08) 0, transparent 24%, transparent 60%, rgba(255,255,255,0.07) 60.2%, transparent 60.5%),
+                radial-gradient(circle at 50% 104%, rgba(4, 6, 9, 0.02) 0, rgba(4, 6, 9, 0.85) 46%, rgba(4, 6, 9, 0.98) 60%, transparent 61%),
+                linear-gradient(180deg, transparent 0, transparent 48%, rgba(5, 7, 10, 0.34) 66%, rgba(5, 7, 10, 0.72) 100%);
+            opacity: 0.95;
         }
         .profile-content {
             position: relative;
