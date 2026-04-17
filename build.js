@@ -42,7 +42,7 @@ function build() {
                     ${mediaHtml}
                     <div class="tweet-footer">
                         <!-- Removed fake stats -->
-                        <span style="color: #444; font-size: 12px;">🏹 阿尔忒弥斯 Original</span>
+                        <span class="tweet-origin">🏹 阿尔忒弥斯 Original</span>
                     </div>
                 </div>
             </div>
