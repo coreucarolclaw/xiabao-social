@@ -129,16 +129,22 @@
         .banner::before {
             content: '';
             position: absolute;
-            inset: 8px 6px auto auto;
-            width: 258px;
-            height: 258px;
+            inset: 2px -2px auto auto;
+            width: 272px;
+            height: 272px;
             border-radius: 50%;
             background:
-                radial-gradient(circle at 50% 50%, rgba(3, 5, 8, 0.98) 0 23%, rgba(3, 5, 8, 0.98) 24%, rgba(10, 13, 19, 0.96) 28%, rgba(220, 229, 238, 0.96) 31%, rgba(220, 229, 238, 0.52) 35%, rgba(220, 229, 238, 0.16) 44%, rgba(220, 229, 238, 0.03) 57%, transparent 68%),
-                radial-gradient(circle at 42% 42%, rgba(248, 250, 253, 0.62) 0 6%, transparent 12%),
-                radial-gradient(circle at 60% 56%, rgba(212, 223, 235, 0.2) 0 8%, transparent 18%);
-            filter: drop-shadow(0 0 24px rgba(217, 229, 243, 0.2)) drop-shadow(0 0 58px rgba(134, 149, 171, 0.16));
-            opacity: 0.98;
+                radial-gradient(circle at 50% 50%, rgba(2, 4, 7, 1) 0 24%, rgba(2, 4, 7, 0.995) 24.6%, rgba(12, 15, 21, 0.98) 28.3%, rgba(152, 110, 92, 0.58) 29.4%, rgba(236, 242, 248, 0.98) 31.1%, rgba(236, 242, 248, 0.72) 34.6%, rgba(211, 223, 236, 0.28) 42%, rgba(211, 223, 236, 0.08) 54%, transparent 66%),
+                radial-gradient(circle at 39% 38%, rgba(248, 250, 253, 0.72) 0 5.5%, rgba(248, 250, 253, 0.12) 9%, transparent 13%),
+                radial-gradient(circle at 58% 58%, rgba(204, 216, 230, 0.28) 0 8%, transparent 16%),
+                radial-gradient(circle at 66% 31%, rgba(255, 226, 210, 0.16) 0 4.5%, transparent 9%);
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.08),
+                0 0 26px rgba(229, 238, 247, 0.18),
+                0 0 74px rgba(152, 170, 195, 0.18),
+                0 0 122px rgba(118, 136, 159, 0.12);
+            filter: drop-shadow(0 0 28px rgba(229, 238, 247, 0.22)) drop-shadow(0 0 76px rgba(132, 149, 173, 0.2));
+            opacity: 0.995;
         }
         .banner::after {
             content: '';
