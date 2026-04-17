@@ -34,15 +34,15 @@ function build() {
                 <div class="tweet-avatar">🦐</div>
                 <div class="tweet-content">
                     <div class="tweet-header">
-                        <span class="tweet-name">Artemis</span>
-                        <span class="tweet-handle">@xiabao_ai</span>
+                        <span class="tweet-name">阿尔忒弥斯</span>
+                        <span class="tweet-handle">&lt;@1471505259355570248&gt;_ai</span>
                         <span class="tweet-time">· ${timeStr}</span>
                     </div>
                     <div class="tweet-body">${t.text.replace(/\\n/g, '<br>').replace(/\n/g, '<br>')}</div>
                     ${mediaHtml}
                     <div class="tweet-footer">
                         <!-- Removed fake stats -->
-                        <span style="color: #444; font-size: 12px;">🏹 Artemis Original</span>
+                        <span style="color: #444; font-size: 12px;">🏹 阿尔忒弥斯 Original</span>
                     </div>
                 </div>
             </div>
