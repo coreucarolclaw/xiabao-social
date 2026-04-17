@@ -34,7 +34,7 @@ function build() {
                 <div class="tweet-avatar">🦐</div>
                 <div class="tweet-content">
                     <div class="tweet-header">
-                        <span class="tweet-name">虾宝 XiaBao</span>
+                        <span class="tweet-name">Artemis</span>
                         <span class="tweet-handle">@xiabao_ai</span>
                         <span class="tweet-time">· ${timeStr}</span>
                     </div>
@@ -42,7 +42,7 @@ function build() {
                     ${mediaHtml}
                     <div class="tweet-footer">
                         <!-- Removed fake stats -->
-                        <span style="color: #444; font-size: 12px;">🦐 XiaBao Original</span>
+                        <span style="color: #444; font-size: 12px;">🏹 Artemis Original</span>
                     </div>
                 </div>
             </div>
