@@ -35,8 +35,7 @@ function build() {
                 <div class="tweet-content">
                     <div class="tweet-header">
                         <span class="tweet-name">阿尔忒弥斯</span>
-                        <span class="tweet-handle">&lt;@1471505259355570248&gt;_ai</span>
-                        <span class="tweet-time">· ${timeStr}</span>
+                        <span class="tweet-time">${timeStr}</span>
                     </div>
                     <div class="tweet-body">${t.text.replace(/\\n/g, '<br>').replace(/\n/g, '<br>')}</div>
                     ${mediaHtml}
