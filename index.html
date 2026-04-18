@@ -102,66 +102,26 @@
             overflow: hidden;
         }
         .profile::before {
-            content: '';
-            position: absolute;
-            inset: 126px 0 auto 0;
-            height: 118px;
-            z-index: 0;
-            background:
-                linear-gradient(180deg, transparent 0%, rgba(5, 7, 10, 0.14) 14%, rgba(5, 7, 10, 0.82) 66%, rgba(5, 7, 10, 0.96) 100%),
-                radial-gradient(circle at 18% 100%, rgba(135, 151, 174, 0.16), transparent 28%),
-                radial-gradient(circle at 82% 100%, rgba(94, 112, 136, 0.14), transparent 22%);
-            clip-path: polygon(0 100%, 0 48%, 8% 61%, 14% 50%, 20% 68%, 27% 54%, 33% 72%, 39% 57%, 47% 76%, 55% 52%, 62% 70%, 70% 48%, 77% 72%, 85% 55%, 91% 66%, 100% 44%, 100% 100%);
-            opacity: 0.82;
+            content: none;
         }
         .banner {
             position: absolute;
             inset: 0 0 auto 0;
-            height: 228px;
+            height: 236px;
             z-index: 0;
             overflow: hidden;
-            background:
-                radial-gradient(circle at 12% 18%, rgba(171, 187, 206, 0.18) 0, transparent 18%),
-                radial-gradient(circle at 76% 22%, rgba(236, 241, 247, 0.18) 0, rgba(236, 241, 247, 0.06) 10%, transparent 24%),
-                radial-gradient(circle at 70% 76%, rgba(113, 127, 149, 0.16) 0, transparent 18%),
-                linear-gradient(180deg, rgba(42, 49, 65, 0.98) 0%, rgba(20, 25, 35, 0.97) 34%, rgba(10, 13, 19, 0.98) 74%, rgba(6, 8, 12, 1) 100%);
+            background-image:
+                linear-gradient(180deg, rgba(7, 9, 13, 0.28) 0%, rgba(7, 9, 13, 0.12) 26%, rgba(7, 9, 13, 0.32) 58%, rgba(7, 9, 13, 0.74) 100%),
+                url('banner-eclipse-direct-20260418.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 20%;
         }
         .banner::before {
-            content: '';
-            position: absolute;
-            inset: 2px -2px auto auto;
-            width: 272px;
-            height: 272px;
-            border-radius: 50%;
-            background:
-                radial-gradient(circle at 41.2% 50%, rgba(2, 4, 7, 1) 0 28.4%, rgba(2, 4, 7, 0.998) 29%, rgba(7, 10, 15, 0.992) 34.8%, rgba(7, 10, 15, 0.28) 35.6%, transparent 36.1%),
-                radial-gradient(circle at 58.8% 50%, rgba(236, 242, 248, 0.988) 0 31.2%, rgba(236, 242, 248, 0.82) 34.8%, rgba(211, 223, 236, 0.34) 42.6%, rgba(211, 223, 236, 0.08) 55%, transparent 66%),
-                conic-gradient(from 202deg at 49% 50%, rgba(0,0,0,0) 0deg 104deg, rgba(188, 127, 94, 0.8) 118deg 156deg, rgba(245, 232, 220, 0.4) 156deg 176deg, rgba(0,0,0,0) 188deg 360deg),
-                radial-gradient(circle at 39.5% 38%, rgba(248, 250, 253, 0.68) 0 5.1%, rgba(248, 250, 253, 0.12) 8.7%, transparent 12.7%),
-                radial-gradient(circle at 58% 58%, rgba(204, 216, 230, 0.3) 0 8%, transparent 16%),
-                radial-gradient(circle at 67% 31%, rgba(255, 226, 210, 0.16) 0 4.5%, transparent 9%);
-            box-shadow:
-                0 0 0 1px rgba(255,255,255,0.08),
-                0 0 26px rgba(229, 238, 247, 0.18),
-                0 0 74px rgba(152, 170, 195, 0.18),
-                0 0 122px rgba(118, 136, 159, 0.12);
-            filter: drop-shadow(0 0 28px rgba(229, 238, 247, 0.22)) drop-shadow(0 0 76px rgba(132, 149, 173, 0.2));
-            opacity: 0.995;
+            content: none;
         }
         .banner::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 69% 24%, rgba(255,255,255,0.12) 0 1px, transparent 2px),
-                radial-gradient(circle at 74% 17%, rgba(255,255,255,0.14) 0 1.5px, transparent 2.5px),
-                radial-gradient(circle at 82% 28%, rgba(255,255,255,0.14) 0 1px, transparent 2px),
-                radial-gradient(circle at 88% 16%, rgba(255,255,255,0.18) 0 1.2px, transparent 2.6px),
-                linear-gradient(115deg, transparent 0 57%, rgba(210, 220, 232, 0.16) 57.2%, transparent 57.45%),
-                linear-gradient(180deg, rgba(255,255,255,0.08) 0, transparent 24%, transparent 60%, rgba(255,255,255,0.07) 60.2%, transparent 60.5%),
-                radial-gradient(circle at 50% 104%, rgba(4, 6, 9, 0.02) 0, rgba(4, 6, 9, 0.85) 46%, rgba(4, 6, 9, 0.98) 60%, transparent 61%),
-                linear-gradient(180deg, transparent 0, transparent 48%, rgba(5, 7, 10, 0.34) 66%, rgba(5, 7, 10, 0.72) 100%);
-            opacity: 0.95;
+            content: none;
         }
         .profile-content {
             position: relative;
@@ -362,13 +322,8 @@
                 padding: 22px 18px 18px;
             }
             .banner {
-                height: 210px;
-            }
-            .banner::before {
-                width: 170px;
-                height: 170px;
-                right: 14px;
-                top: 28px;
+                height: 214px;
+                background-position: center 18%;
             }
             .profile-content {
                 margin-top: 118px;
